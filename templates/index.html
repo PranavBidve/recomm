@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choosing your university</title>
+
+    <style>
+        body {
+            background-image: url("https://imgs.search.brave.com/kMH7B7SRT72O4YUYFL-64kReLbL7gqjknLCFunHjmPs/rs:fit:1200:1120:1/g:ce/aHR0cHM6Ly93d3cu/bGVhcm5kYXNoLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvdW5p/dmVyc2l0eS1idWls/ZGluZy0xLmpwZw");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        
+
+        }
+        .container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			background-color: blue;
+		}
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: #fff;
+			border-radius: 10px;
+			margin: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+			text-align: center;
+			position: relative;
+		}
+		.arrow {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border: 20px solid transparent;
+		}
+		.arrow-right {
+			right: -40px;
+			border-left-color: black;
+		}
+		.arrow-left {
+			left: -40px;
+			border-right-color: #fff;
+		}
+        .arrow {
+			width: 0;
+			height: 0;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-left: 10px solid #333;
+		}
+    </style>
+
+    <script>
+        function display()
+        {
+
+
+        }
+        
+    </script>
+</head>
+
+<body>
+
+
+    <h1 style="color: white; background-color:black; text-align: center; margin-top: 0px;"> University recommender
+    </h1>
+
+    <center style="margin-top: 10px;">
+        <div style="background-color: rgb(154, 154, 154);  width: 30%; opacity: 0.8; border-radius: 20px;margin-top: 200px;">
+            
+            <form action="{{ url_for('submit')}}" method="post" style="padding: 10px;">
+
+                <label for="area" style="font-weight: 700;">Name: </label>
+                <br>
+                <input type="text" name="area" id="are" style="border-left: 0; border-right:0; border-top: 0; outline: none; background-color: rgb(194, 194, 194);">
+                <br><br>
+                <label for="bhk" style="font-weight: 700;">Age: </label>
+                <br>
+                <input type="text" name="bhk" id="bh" style="border-left: 0; border-right:0; border-top: 0; outline: none; background-color: rgb(194, 194, 194);">
+                <br><br>
+                <label for="bath" style="font-weight: 700;">Current status:</label>
+                <br>
+                <input type="text" name="bath" id="bat" style="border-left: 0; border-right:0; border-top: 0; outline: none; background-color: rgb(194, 194, 194);">
+                <br><br>
+                <label for="location" style="font-weight: 700;">Dream status: </label>
+                <br>
+                <input type="text" name="location" id="location" style="border-left: 0; border-right:0; border-top: 0; outline: none; background-color: rgb(194, 194, 194);">
+                <br><br>
+                <input type="submit" name="submit" id="submit" onclick="display()">
+            </form>
+        </div>
+    
+        <br><br>
+
+    <div style="margin: 10px; background-color:green; font-size: large; color: white;" >
+
+        
+        
+        {{ prediction_text }}
+    
+
+
+        
+
+
+
+
+  
+    <div class="container">
+		<div class="box">{{o1}}</div>
+		<div class="arrow arrow-right"></div>
+        <div class="arrow"></div>
+		<div class="box">{{o2}}</div>
+		<div class="arrow arrow-right"></div>
+		<div class="box">{{o3}}</div>
+		<div class="arrow arrow-right"></div>
+		<div class="box">{{o4}}</div>
+		<div class="arrow arrow-right"></div>
+		<div class="box">{{o5}}</div>
+		<div class="arrow arrow-right"></div>
+		<div class="box">{{o6}}</div>
+		<div class="arrow arrow-right"></div>
+		<div class="box">{{o7}}</div>
+		<div class="arrow arrow-right"></div>
+		<div class="box">{{o8}}</div>
+		<div class="arrow arrow-left"></div>
+	</div> 
+    </div> 
+    
+</center>
+
+</body>
+
+</html>
